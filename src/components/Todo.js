@@ -1,8 +1,13 @@
 import React from 'react'
 
 const Todo = props => {
+    const handleClick = evt => {
+        evt.preventDefault()
+        props.toggledTodo(props.item.id)
+    }
+
     return (
-        <div className={`item${props.item.purchased ? ' purchased' : ''}`}>
+        <div onClick={handleClick} className={`item${props.item.completed ? ' completed' : ''}`}>
             <p>{props.item.name}</p>
         </div>
     )
