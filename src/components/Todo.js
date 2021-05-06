@@ -3,12 +3,12 @@ import React from 'react'
 const Todo = props => {
     const handleClick = evt => {
         evt.preventDefault()
-        props.toggledTodo(props.item.id)
+        props.toggledCompleted(props.item.id)
     }
 
     return (
         <div onClick={handleClick} className={`item${props.item.completed ? ' completed' : ''}`}>
-            <p>{props.item.name}</p>
+            <p > {props.item.task} </p>
         </div>
     )
 }
