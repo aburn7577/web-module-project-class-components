@@ -7,7 +7,7 @@ const TodoForm = props => {
             <input
                 value={props.newTask}
                 type='text' name='task'
-                onChange={props.handleChanges} />
+                onChange={props.handleChange} />
             <button>Add</button>
             <div className='btn'>
 

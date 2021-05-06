@@ -23,7 +23,7 @@ class App extends React.Component {
     super()
     this.state = {
       list: list,
-      //newTask: ''
+      newTask: ''
     }
   }
   addTask = newTask => {
@@ -35,7 +35,7 @@ class App extends React.Component {
       }]
     })
   }
-  handleChanges = evt => {
+  handleChange = evt => {
     this.setState({
       newTask: evt.target.value
     })
@@ -44,7 +44,7 @@ class App extends React.Component {
   handleSubmit = evt => {
     evt.preventDefault()
     this.addTask(this.state.newTask)
-    //this.setState({ newTask: '' })
+    this.setState({ newTask: '' })
   }
 
   toggledCompleted = taskId => {
@@ -69,6 +69,7 @@ class App extends React.Component {
 
 
   render() {
+    console.log(this.state)
     return (
       <div>
         <div>
