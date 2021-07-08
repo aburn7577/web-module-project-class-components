@@ -31,7 +31,7 @@ class App extends React.Component {
   }
   handleAdd = (task) => {
     const item = {
-      name: task,
+      task: task,
       id: Date.now(),
       completed: false
     }
@@ -43,6 +43,9 @@ class App extends React.Component {
   handleClear = () => {
     const newList = this.state.list.filter(task => {
       return !task.completed
+    })
+    this.setState({
+      list: newList
     })
   }
   handleToggle = (itemId) => {
