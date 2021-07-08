@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0 36px;
+  max-width: 665px;
+  margin: 0 auto;
+}
+p {
+  background-color: #57e644;
+  width: 100%;
+  height: 2rem;
+  text-align: left;
+  margin: 4px 0;
+  padding-left: 8px;
+}
+.list{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.list.purchased {
+  background-color: #d17d7c;
+  text-decoration: line-through;
+}
